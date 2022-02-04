@@ -19,18 +19,18 @@ class Application
   
       @game = Game.new
 
-
+     
     # remplissage des joueurs
       while  @game.end_game == false
-        @board.play_turn(@game.player1.user_name,@game.player1.value )
+        @board.play_turn(@game.player1.user_name, @game.player1.value )
         @show.show_board(@board)
         if @board.victory?
          then  game.end_game == true
          puts "#{@show.player1.name} a gagné !!"
         end
 
-        @board.play_turn(@game.player2)
-        @board.show_board(@board)
+        @board.play_turn(@game.player2.user_name, @game.player2.value)
+        @show.show_board(@board)
         if @board.victory?
          then 
            game.end_game == true

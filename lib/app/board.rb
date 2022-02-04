@@ -27,8 +27,9 @@ class Board
       #une méthode qui :
       #1) demande au bon joueur ce qu'il souhaite faire
       #2) change la BoardCase jouée en fonction de la valeur du joueur (X ou O)
+      puts ""
       puts "tour de #{player_user_name}"
-      puts "Quelle case restante veux-tu jouer ?"
+      puts "Quelle case restante veux-tu jouer ? (valeur possible A1 a C3 )"
       print ">"
       choise = gets.chomp
       @grid[choise]= "#{player_value}"

@@ -6,7 +6,10 @@ class Show
 
 
     def show_board(board)
-      puts "#{board}"
+      @affichage = board.grid.values
+
+      puts "#{@affichage.each_slice(3){|obj| p obj}}"
+     
     end
   
     def show(name)

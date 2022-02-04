@@ -14,6 +14,7 @@ class Game
       puts "nom du joueur1"
       user_name = gets.chomp
       @player1 = Player.new(user_name, "x")
+      
       # @display.ask_name_player(2)
 
       puts "nom du joueur2"
