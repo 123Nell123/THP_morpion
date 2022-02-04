@@ -25,22 +25,24 @@ class Application
         @board.play_turn(@game.player1.user_name, @game.player1.value )
         @show.show_board(@board)
         if @board.victory?
-         then  game.end_game == true
-         puts "#{@show.player1.name} a gagné !!"
+         then  @game.end_game == true
+         puts "#{@game.player1.user_name} a gagné !!"
+         break
         end
 
         @board.play_turn(@game.player2.user_name, @game.player2.value)
         @show.show_board(@board)
         if @board.victory?
          then 
-           game.end_game == true
-           puts "#{@show.player2.name} a gagné !!"
+           @game.end_game == true
+           puts "#{@game.player2.user_name} a gagné !!"
+           break
         end
 
 
         
       end
-      puts " MATCH NUL, c'est nul... rejoues !"
+     
     end
  
   end
